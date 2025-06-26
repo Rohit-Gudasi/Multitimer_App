@@ -32,7 +32,7 @@ A powerful and flexible multi-timer application built with React. Create, run, p
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/multitimerapp.git
+git clone https://github.com/Rohit-Gudasi/Multitier_App
 cd multitimerapp
 npm install
 npm start
