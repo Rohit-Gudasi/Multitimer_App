@@ -1,0 +1,377 @@
+/* === Global styles === */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+.screen {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* === Navigation === */
+nav {
+  background: #1e88e5;
+  color: white;
+  padding: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.75;
+}
+
+/* === Timer Form === */
+.timer-form,
+.edit-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+}
+
+.timer-form input,
+.timer-form select,
+.edit-form input,
+.edit-form select {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  flex: 1 1 200px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #43a047;
+}
+
+/* === Buttons === */
+.timer-form button,
+.edit-form button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  margin-left: 80px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.timer-form button {
+  background: #43a047;
+  color: white;
+}
+
+.timer-form button:hover {
+  background: #388e3c;
+}
+
+.edit-form .edit-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.edit-form .edit-buttons button {
+  background: #1976d2;
+  color: white;
+}
+
+.edit-form .edit-buttons button[type="button"] {
+  background: #b0bec5;
+}
+
+.edit-form .edit-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* === Category Section === */
+.category-section {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.category-section h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+/* === Bulk Buttons === */
+.bulk-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bulk-buttons button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #546e7a;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.bulk-buttons button:hover {
+  background-color: #37474f;
+}
+
+/* === Timer Card === */
+.timer-card {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  background-color: #fafafa;
+  border-left: 6px solid #90caf9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.timer-card h4 {
+  margin: 0;
+  color: #1a237e;
+}
+
+.timer-card p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+/* === Timer Buttons === */
+.btn-group {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-group button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-group button:hover {
+  background-color: #1976d2;
+}
+
+/* === Progress Bar === */
+.progress-container {
+  height: 14px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #42a5f5, #66bb6a, #ffa726);
+  background-size: 300% 100%;
+  animation: progressAnimation 3s ease infinite;
+  border-radius: 8px;
+}
+
+@keyframes progressAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === History Section === */
+.history {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  animation: fadeIn 0.4s ease-in-out;
+  transition: all 0.3s ease;
+}
+
+.history-title {
+  color: #2e7d32;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.history-empty {
+  color: #999;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 2rem 0;
+  background: #f1f8e9;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+.history-category {
+  margin-bottom: 2.5rem;
+  border-left: 5px solid #aed581;
+  padding-left: 1rem;
+}
+
+.history-category-title {
+  color: #00796b;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.history-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.history-item {
+  background: #f9fbe7;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #dce775;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  transition: background 0.3s ease;
+}
+
+.history-item:hover {
+  background: #fffde7;
+}
+
+.history-item-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #33691e;
+}
+
+.history-item-time {
+  font-size: 0.9rem;
+  color: #757575;
+  margin-top: 0.3rem;
+}
+
+/* === Inline Alert === */
+.inline-alert {
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateY(10px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+
+/* === Notifications (Toast-style) === */
+.notification-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notification {
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  min-width: 250px;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideInFadeOut 4s ease forwards;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Notification variants */
+.notification.success { background-color: #43a047; }
+.notification.error { background-color: #e53935; }
+.notification.info { background-color: #1e88e5; }
+.notification.warning { background-color: #fb8c00; }
+
+@keyframes slideInFadeOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .timer-form,
+  .edit-form {
+    flex-direction: column;
+  }
+
+  .bulk-buttons,
+  .btn-group,
+  .edit-form .edit-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .notification-container {
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
